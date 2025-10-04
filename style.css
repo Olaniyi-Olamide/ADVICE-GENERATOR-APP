@@ -25,17 +25,20 @@ main {
   color: hsl(150, 100%, 66%);
   margin-block: 1rem;
   font-weight: 600;
+  transition: all ease-in-out 1.5s;
 }
 .advice-text {
   font-size: 1.5rem;
   color: hsl(193, 38%, 86%);
   line-height: 1.3;
   font-weight: 700;
+  transition: all ease-in-out 1.5s;
 }
 .hidden {
   display: none;
 }
-.pattern-divider-mobile {
+.pattern-divider-mobile,
+.pattern-divider-desktop {
   margin-block: 1.5rem;
 }
 .roll-dice-btn {
@@ -52,8 +55,18 @@ main {
 .roll-dice-btn:hover {
   box-shadow: 0 0 20px hsla(150, 100%, 66%, 0.9);
 }
+.fade-in {
+  transition: all ease-in-out 1.5s;
+  opacity: 0;
+}
 @media (min-width: 767px) {
   main {
     max-width: 500px;
+  }
+  .hidden {
+    display: block;
+  }
+  .hide {
+    display: none;
   }
 }
